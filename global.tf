@@ -3,7 +3,7 @@ locals {
     context : {
       product    = var.product
       service    = var.service
-      start_date = "2022-04-01"
+      start_date = "2023-01-31"
       end_date   = "unknown"
     }
     purpose : {
@@ -11,14 +11,14 @@ locals {
       service_class     = "bronze"
     }
     organization : {
-      client = "anct"
+      client = "taxi-aymeric"
     }
     stakeholders : {
-      business_owner  = "celestin.leroux@beta.gouv.fr"
-      technical_owner = "marc.gavanier@beta.gouv.fr"
-      approver        = "marc.gavanier@beta.gouv.fr"
+      business_owner  = "romain-cambonie@gmail.com"
+      technical_owner = "romain-cambonie@gmail.com"
+      approver        = "romain-cambonie@gmail.com"
       creator         = "terraform"
-      team            = "cartographie-nationale"
+      team            = "romain-cambonie"
     }
   }
 }

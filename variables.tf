@@ -2,7 +2,7 @@ variable "product" {
   type        = string
   nullable    = false
   description = "The name of the product that hosts the environment"
-  default     = "cartographie_nationale"
+  default     = "taxi-aymeric"
 }
 
 variable "service" {

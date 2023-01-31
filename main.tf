@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "cartographie-nationale"
+    organization = "taxi-aymeric"
 
     workspaces {
       prefix = "client-"

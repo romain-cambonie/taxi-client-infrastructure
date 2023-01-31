@@ -2,9 +2,7 @@
 
 ## À propos
 
-Client infrastructure décrit par le code l'infrastructure à provisionner pour le bon fonctionnement du [client de la cartographie nationale](https://github.com/anct-cartographie-nationale/client).
-
-> Ce dépôt n'est pas utile pour faire fonctionner la Cartographie Nationale en local.
+Client infrastructure décrit par le code l'infrastructure à provisionner pour le bon fonctionnement de Taxi Aymeric
 
 ## Table des matières
 
@@ -83,19 +81,26 @@ Pour que les modifications de la description de l'infrastructure soient appliqu�
 #### CI
 
 - [Github Actions](https://docs.github.com/en/actions) est l'outil d'intégration et de déploiement continu intégré à GitHub
-  - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/anct-cartographie-nationale/client-infrastructure/actions/)
+  - L'historique des déploiements est disponible [sous l'onglet Actions](https://github.com/romain-cambonie/taxi-client-infrastructure/actions/)
 - Secrets du dépôt :
-  - `TF_API_TOKEN` : Le token d'api Terraform Cloud de l'équipe Cartographie Nationale qui permet à la CI d'opérer des actions sur Terraform Cloud
+  - `TF_API_TOKEN` : Le token d'api Terraform Cloud de l'équipe romain-cambonie qui permet à la CI d'opérer des actions sur Terraform Cloud
 
 #### Déploiement
 
-- [Terraform Cloud](https://www.clever-cloud.com/) est la plateforme proposée par HasiCorp pour administrer les modifications d'infrastructure
-  - Organisation : [cartographie-nationale](https://app.terraform.io/app/cartographie-nationale/workspaces)
-  - Workspaces : `client-*`
-    - [client-production](https://app.terraform.io/app/cartographie-nationale/workspaces/client-production)
 - [AWS](https://aws.amazon.com/) est la plateforme de services Cloud proposée par Amazon.
-  - Utilisateur : `cartographie-nationale.client.infrastructure`
+  - Utilisateur : `taxi-aymeric.client.infrastructure`
   - Groupe : `client.deployer`
+- [Terraform Cloud](https://www.clever-cloud.com/) est la plateforme proposée par HasiCorp pour administrer les modifications d'infrastructure
+  - Organisation : [taxi-aymeric](https://app.terraform.io/app/taxi-aymeric/workspaces)
+  - Workspaces : `client-*`
+    - [client-production](https://app.terraform.io/app/taxi-aymeric/workspaces/client-production)
+  - Variables
+    - `AWS_SECRET_ACCESS_KEY`
+      - Value : Sensitive - write only
+      - Category : env
+    - `AWS_ACCESS_KEY_ID`
+      - Value : Sensitive - write only
+      - Category : env
 
 ## Licence
 
