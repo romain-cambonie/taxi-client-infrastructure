@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "client" {
-  bucket        = replace("${local.product_information.context.product}_${local.product_information.context.service}", "_", "-")
+  bucket        = replace("${local.product_information.context.product}_${local.product_information.context.service}_bucket", "_", "-")
   force_destroy = true
   tags          = local.tags
 }
